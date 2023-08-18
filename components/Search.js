@@ -8,7 +8,8 @@ const Search = () => {
   return (
     <View style={styles.inputParent}>
       <TextInput style={styles.inputText} placeholder='Search...' value={result} onChangeText={text => setResult(text)} />
-      {result.length === 0 ? '' :
+      {
+        !!result.length &&
         <TouchableOpacity onPress={() => setResult('')}>
           <Icon name='close-outline' style={styles.button} />
         </TouchableOpacity>}

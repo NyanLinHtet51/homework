@@ -7,9 +7,9 @@ const Category = () => {
     <View>
       <Text style={styles.commonTitle}>Categories</Text>
       <ScrollView horizontal={true} style={styles.scrollParent}>
-        {categories.map(item => {
+        {categories.map((item,index) => {
           return (
-            <View style={styles.categoryCard} key={item}>
+            <View style={styles.categoryCard} key={index}>
               <Text>{item}</Text>
             </View>
           );
